@@ -1,31 +1,44 @@
-let subjectCount = 1;
-
-function addSubject() {
-    subjectCount++;
+// Function to dynamically add 9 subjects with names
+function addSubjects() {
     const subjectsDiv = document.getElementById('subjects');
-    const newSubject = document.createElement('div');
-    newSubject.className = 'subject';
-    newSubject.innerHTML = `
-        <label for="grade${subjectCount}">Grade:</label>
-        <select id="grade${subjectCount}" name="grade${subjectCount}">
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C</option>
-        </select>
-        <label for="credits${subjectCount}">Credits:</label>
-        <input type="number" id="credits${subjectCount}" name="credits${subjectCount}" min="1" max="10" required>
-    `;
-    subjectsDiv.appendChild(newSubject);
+    const subjectNames = [
+        "Professional English - I",
+        "Heritage of Tamils",
+        "Matrices and Calculus",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Problem Solving and Python Programming",
+        "Physics and Chemistry Laboratory",
+        "Problem Solving and Python Programming Laboratory",
+        "English Laboratory"
+    ];
+
+    for (let i = 1; i <= 9; i++) {
+        const subject = document.createElement('div');
+        subject.className = 'subject';
+        subject.innerHTML = `
+            <label for="grade${i}">${subjectNames[i - 1]}:</label>
+            <select id="grade${i}" name="grade${i}">
+                <option value="10">O</option>
+                <option value="9">A+</option>
+                <option value="8">A</option>
+                <option value="7">B+</option>
+                <option value="6">B</option>
+                <option value="5">C</option>
+            </select>
+            <label for="credits${i}">Credits:</label>
+            <input type="number" id="credits${i}" name="credits${i}" min="1" max="10" required>
+        `;
+        subjectsDiv.appendChild(subject);
+    }
 }
 
+// Function to calculate GPA
 function calculateGPA() {
     let totalCredits = 0;
     let totalGradePoints = 0;
 
-    for (let i = 1; i <= subjectCount; i++) {
+    for (let i = 1; i <= 9; i++) {
         const grade = parseFloat(document.getElementById(`grade${i}`).value);
         const credits = parseFloat(document.getElementById(`credits${i}`).value);
 
@@ -43,3 +56,6 @@ function calculateGPA() {
     const gpa = (totalGradePoints / totalCredits).toFixed(2);
     document.getElementById('result').innerText = `Your GPA is: ${gpa}`;
 }
+
+// Add 9 subjects when the page loads
+window.onload = addSubjects;
