@@ -1,9 +1,9 @@
-/* Import Nunito font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+/* Import Playfair Display font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-/* Apply Nunito as the default font */
+/* Apply Playfair Display as the default font */
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Playfair Display', serif;
     background: linear-gradient(135deg, #E2725B 33%, #5F9EA0 33%, #5F9EA0 66%, #F5F5DC 66%); /* Three-color gradient */
     margin: 0;
     padding: 0;
@@ -15,6 +15,7 @@ body {
 }
 
 .container {
+    font-family: 'Playfair Display', serif;
     background-color: #ffffff; /* White container */
     padding: 25px;
     border-radius: 12px;
