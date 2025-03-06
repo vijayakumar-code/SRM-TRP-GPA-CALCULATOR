@@ -28,7 +28,7 @@ function addSubjects() {
                 <option value="5">C</option>
             </select>
             <label for="credits${i}">Credits:</label>
-            <input type="number" id="credits${i}" name="credits${i}" min="1" max="10" value="${subjectCredits[i - 1]}" readonly>
+            <input type="number" id="credits${i}" name="credits${i}" value="${subjectCredits[i - 1]}" readonly>
         `;
         subjectsDiv.appendChild(subject);
     }
