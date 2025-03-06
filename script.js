@@ -1,6 +1,7 @@
 // Function to dynamically add subjects divided into Theory and Practicals
 function addSubjects() {
-    const subjectsDiv = document.getElementById('subjects');
+    const theorySubjectsDiv = document.getElementById('theorySubjects');
+    const practicalSubjectsDiv = document.getElementById('practicalSubjects');
 
     // Theory Subjects
     const theorySubjects = [
@@ -20,10 +21,6 @@ function addSubjects() {
     ];
 
     // Add Theory Subjects
-    const theorySection = document.createElement('div');
-    theorySection.innerHTML = `<h3>Theory</h3>`;
-    subjectsDiv.appendChild(theorySection);
-
     theorySubjects.forEach((subject, index) => {
         const subjectDiv = document.createElement('div');
         subjectDiv.className = 'subject';
@@ -40,14 +37,10 @@ function addSubjects() {
             <label for="credits${index + 1}">Credits:</label>
             <input type="number" id="credits${index + 1}" name="credits${index + 1}" value="${subject.credits}" readonly>
         `;
-        subjectsDiv.appendChild(subjectDiv);
+        theorySubjectsDiv.appendChild(subjectDiv);
     });
 
     // Add Practical Subjects
-    const practicalSection = document.createElement('div');
-    practicalSection.innerHTML = `<h3>Practicals</h3>`;
-    subjectsDiv.appendChild(practicalSection);
-
     practicalSubjects.forEach((subject, index) => {
         const subjectDiv = document.createElement('div');
         subjectDiv.className = 'subject';
@@ -64,7 +57,7 @@ function addSubjects() {
             <label for="credits${index + 7}">Credits:</label>
             <input type="number" id="credits${index + 7}" name="credits${index + 7}" value="${subject.credits}" readonly>
         `;
-        subjectsDiv.appendChild(subjectDiv);
+        practicalSubjectsDiv.appendChild(subjectDiv);
     });
 }
 
