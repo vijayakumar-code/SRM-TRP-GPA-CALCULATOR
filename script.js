@@ -61,11 +61,12 @@ function addSubjects() {
     });
 }
 
-// Function to calculate GPA
+// Function to calculate GPA for all subjects together
 function calculateGPA() {
     let totalCredits = 0;
     let totalGradePoints = 0;
 
+    // Loop through all 9 subjects
     for (let i = 1; i <= 9; i++) {
         const grade = parseFloat(document.getElementById(`grade${i}`).value);
         const credits = parseFloat(document.getElementById(`credits${i}`).value);
