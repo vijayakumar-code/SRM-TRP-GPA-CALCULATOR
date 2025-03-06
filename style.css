@@ -1,20 +1,20 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: #0a192f; /* Dark blue background */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
+    color: #ccd6f6; /* Light blue text */
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #112240; /* Dark blue container */
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     width: 350px;
     text-align: center;
 }
@@ -22,40 +22,40 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #2575fc;
+    color: #64ffda; /* Teal accent color */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .subject {
     margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 15px;
+    background-color: #1f4068; /* Darker blue for subject cards */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #ccd6f6; /* Light blue text */
 }
 
 select, input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #233554; /* Dark blue border */
     border-radius: 6px;
     font-size: 14px;
-    color: #333;
-    background-color: #fafafa;
+    color: #ccd6f6; /* Light blue text */
+    background-color: #1f4068; /* Darker blue background */
     transition: border-color 0.3s ease;
 }
 
 select:focus, input:focus {
-    border-color: #2575fc;
+    border-color: #64ffda; /* Teal accent color on focus */
     outline: none;
 }
 
@@ -64,8 +64,8 @@ button {
     margin: 10px 5px;
     border: none;
     border-radius: 6px;
-    background-color: #2575fc;
-    color: #fff;
+    background-color: #64ffda; /* Teal accent color */
+    color: #0a192f; /* Dark blue text */
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #1b5fd9;
+    background-color: #52d1b2; /* Darker teal on hover */
     transform: translateY(-2px);
 }
 
@@ -85,8 +85,8 @@ button:active {
     margin-top: 25px;
     font-size: 20px;
     font-weight: bold;
-    color: #2575fc;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #64ffda; /* Teal accent color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Add some animations */
