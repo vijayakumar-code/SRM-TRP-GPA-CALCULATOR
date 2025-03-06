@@ -1,5 +1,9 @@
+/* Import Nunito font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Apply Nunito as the default font */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: #0a192f; /* Dark blue background */
     margin: 0;
     padding: 0;
